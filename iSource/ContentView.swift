@@ -82,20 +82,21 @@ struct RandomizeView : View {
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                             .foregroundColor(.black)
-                        Text("Click randomize button below to get inspiration what to learn in SwiftUI!")
+                        Text("Pick your preferred new topic above to learn in SwiftUI by swiping it!")
                             .font(.system(size: 12))
                             .foregroundColor(.black)
                             .frame(width: 250, height: 30, alignment: .center)
                             .multilineTextAlignment(.center)
                             .lineLimit(nil)
-                        Button(action: {
-                            randomizeCard()
-                            }) {
-                                Image(systemName: "r.joystick.tilt.down.fill")
-                                    .font(.system(size: 30, weight: .bold))
-                                    .foregroundColor(.black)
-                            }
+//                        Button(action: {
+//                            randomizeCard()
+//                            }) {
+//                                Image(systemName: "r.joystick.tilt.down.fill")
+//                                    .font(.system(size: 30, weight: .bold))
+//                                    .foregroundColor(.black)
+//                            }
                     }
+                    
                 }
                 
             }
@@ -112,15 +113,15 @@ struct RandomizeView : View {
     }
     
     // MARK: - Randomize Feature
-    func randomizeCard() {
-        topic_value.shuffle()
-        var int = 1
-        ForEach(topic_value){topic in
-            topic_value[topic.id].place = int
-            int += 1
-        }
-        int = 1
-    }
+//    func randomizeCard() {
+//        topic_value.shuffle()
+//        var int = 1
+//        ForEach(topic_value){topic in
+//            topic_value[topic.id].place = int
+//            int += 1
+//        }
+//        int = 1
+//    }
     
     // MARK: - Restore Card Feature
     func restoreCard(id: Int) {
